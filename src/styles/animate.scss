@@ -1,0 +1,118 @@
+.img-fade-out {
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.img-fade-in {
+  animation: ImgFadeInUp 0.8s ease-in-out;
+}
+
+@keyframes ImgFadeInUp {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.paused img {
+  opacity: 1 !important;
+}
+
+.structure-question img {
+  display: block;
+  // margin: 15px 0 !important;
+  margin: 15px auto !important;
+  max-width: 320px !important;
+  min-width: 50px !important;
+
+  &.dark {
+     opacity: 0.45;
+  }
+  &.light {
+     opacity: 1;
+  }
+}
+
+@keyframes countWave {
+  0% {
+      transform: translateY(0);
+  }
+
+  25% {
+      transform: translateY(-10px);
+  }
+
+  75% {
+      transform: translateY(10px);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes countWave2 {
+  0% {
+      transform: translateY(0) scale(0.8);
+  }
+  25% {
+      transform: translateY(-20px) scale(1.05);
+  }
+  65% {
+      transform: translateY(10px) scale(1);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.dot-contain {
+  overflow: hidden;
+  position: relative;
+}
+
+.dotting {
+  display: inline-block;
+  width: 10px;
+  min-height: 2px;
+  padding-right: 2px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  background-color: currentColor;
+  background-clip: content-box;
+  box-sizing: border-box;
+  animation: dot 2s infinite step-start both;
+}
+.dotting {
+  margin-left: 2px;
+  padding-left: 2px;
+}
+
+@keyframes dot {
+  25% {
+      border-color: transparent;
+      background-color: transparent;
+  }
+  50% {
+      border-right-color: transparent;
+      background-color: transparent;
+  }
+  75% {
+      border-right-color: transparent;
+  }
+}
+
+@keyframes tickFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}

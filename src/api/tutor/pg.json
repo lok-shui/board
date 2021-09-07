@@ -1,0 +1,565 @@
+{
+  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+  "type": "sand",
+  "name": "Root",
+  "children": [
+    {
+      "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+      "type": "sand",
+      "name": "题目",
+      "children": [
+        {
+          "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+          "type": "pand",
+          "name": "题目P",
+          "children": [
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "ts": "ait-tutor-board-new",
+              "type": "instruction",
+              "name": "显示题目",
+              "instruction": "显示题目",
+              "children": [],
+              "关联": {},
+              "内容": "<p class=\"CREATED_BY_PG_GENERATOR\">计算：</p> <p>&nbsp; &nbsp; <math xmlns=\"http://www.w3.org/1998/Math/MathML\" ><mn>3</mn><mo>&#x00F7;</mo><mn>4</mn></math></p>"
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "ts": "ait-tutor-board-new",
+              "type": "instruction",
+              "name": "小朋友，计算下列算式",
+              "instruction": "解说",
+              "children": [],
+              "内容": "小朋友，计算下列算式",
+              "语音": "/files/ait-tts-proxy-svc/41f3b78bafdf8436b0ebe2535b2be7e3.mp3"
+            }
+          ]
+        }
+      ],
+      "sequence": null,
+      "iterator": null
+    },
+    {
+      "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+      "type": "sand",
+      "name": "智能提示",
+      "children": [
+        {
+          "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+          "type": "sand",
+          "name": "元信息",
+          "children": [
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "sand",
+              "name": "知识点",
+              "children": [],
+              "sequence": null,
+              "iterator": null
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "sand",
+              "name": "规律",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "注意试商时，余数要比除数小",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "注意试商时，余数要比除数小",
+                  "语音": "/files/ait-tts-proxy-svc/cc3da130683dde15858c388b38431827.mp3"
+                }
+              ],
+              "sequence": null,
+              "iterator": null
+            }
+          ],
+          "sequence": null,
+          "iterator": null
+        },
+        {
+          "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+          "type": "sand",
+          "name": "解题思路",
+          "children": [],
+          "sequence": null,
+          "iterator": null
+        }
+      ],
+      "sequence": null,
+      "iterator": null
+    },
+    {
+      "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+      "type": "sand",
+      "name": "智能讲解",
+      "children": [
+        {
+          "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+          "ts": "ait-tutor-board-new",
+          "type": "instruction",
+          "name": "现在，我们一起来算算",
+          "instruction": "解说",
+          "children": [],
+          "内容": "现在，我们一起来算算",
+          "语音": "/files/ait-tts-proxy-svc/0d52e1aa27a187818ced3482f5eaa24e.mp3"
+        },
+        {
+          "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+          "type": "sand",
+          "name": "计算",
+          "children": [
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "ts": "ait-tutor-board-new",
+              "type": "instruction",
+              "name": "计算",
+              "instruction": "显示步骤",
+              "children": [],
+              "关联": {},
+              "内容": "计算",
+              "重点": [],
+              "导航": []
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-1-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "罗列竖式",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "罗列竖式",
+                  "语音": "/files/ait-tts-proxy-svc/6ff9b84e8bfa0ba688e507150f100ed6.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "1-罗列竖式",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "罗列竖式",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-2-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "试商",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "试商",
+                  "语音": "/files/ait-tts-proxy-svc/239b71fc1065be4fbb41bc51a3ce5622.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "2-试商",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "试商",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-align\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-align-add\"><mn>0</mn></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-3-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "点上小数点",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "点上小数点",
+                  "语音": "/files/ait-tts-proxy-svc/d7dd88963b49ef17f631437728ccc8e4.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "3-点上小数点",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "点上小数点",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-align\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point ani-stack-divide-align-add\"><mo>.</mo></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point ani-stack-divide-align-add\"><mo>.</mo></mrow></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-4-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "添0",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "添0",
+                  "语音": "/files/ait-tts-proxy-svc/1c19c8caac2a6e19737f1427e2e04b1c.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "4-添0",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "添0",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-align\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline ani-stack-divide-align-add\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mrow class=\"ani-stack-divide-align-add\"><mn>0</mn></mrow></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-5-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "试商",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "试商",
+                  "语音": "/files/ait-tts-proxy-svc/239b71fc1065be4fbb41bc51a3ce5622.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "5-试商",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "试商",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-try\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mrow class=\"ani-stack-divide-try\"><mn>7</mn></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>0</mn></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-6-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "商乘除数",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "商乘除数",
+                  "语音": "/files/ait-tts-proxy-svc/5ca6ba63e0ed3fe8956ade2a64504038.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "6-商乘除数",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "商乘除数",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-multiply\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mrow class=\"ani-stack-divide-quotient\"><mn>7</mn></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-multiply-after\"><mn>2</mn></mrow></mtd><mtd><mrow class=\"ani-stack-divide-multiply-after\"><mn>8</mn></mrow></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-7-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "相减",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "相减",
+                  "语音": "/files/ait-tts-proxy-svc/2ae5fc36633b5c264920e08540528f00.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "7-相减",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "相减",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-subtract\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>7</mn></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mrow class=\"ani-stack-divide-subtract-minuend\"><mn>3</mn></mrow><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mrow class=\"ani-stack-divide-subtract-minuend\"><mn>0</mn></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend\"><mn>2</mn></mrow></mtd><mtd><mrow class=\"ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend\"><mn>8</mn></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline ani-stack-row-underline-new\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-subtract-after\"><mn>2</mn></mrow></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-8-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "添0",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "添0",
+                  "语音": "/files/ait-tts-proxy-svc/1c19c8caac2a6e19737f1427e2e04b1c.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "8-添0",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "添0",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-align\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>7</mn></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline ani-stack-divide-align-add\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mrow class=\"ani-stack-divide-align-add\"><mn>0</mn></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mn>8</mn></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline ani-stack-divide-align-add\"></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-9-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "余数合并下一位数",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "余数合并下一位数",
+                  "语音": "/files/ait-tts-proxy-svc/80fe4f48f021873017719158982cd22f.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "9-余数合并下一位数",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "余数合并下一位数",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-align\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>7</mn></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mn>8</mn></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mrow class=\"ani-stack-divide-align-add\"><mn>0</mn></mrow></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-10-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "试商",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "试商",
+                  "语音": "/files/ait-tts-proxy-svc/239b71fc1065be4fbb41bc51a3ce5622.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "10-试商",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "试商",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-try\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>7</mn></mtd><mtd><mrow class=\"ani-stack-divide-try\"><mn>5</mn></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mn>8</mn></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-11-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "商乘除数",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "商乘除数",
+                  "语音": "/files/ait-tts-proxy-svc/5ca6ba63e0ed3fe8956ade2a64504038.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "11-商乘除数",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "商乘除数",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-multiply\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>7</mn></mtd><mtd><mrow class=\"ani-stack-divide-quotient\"><mn>5</mn></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mn>8</mn></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-multiply-after\"><mn>2</mn></mrow></mtd><mtd><mrow class=\"ani-stack-divide-multiply-after\"><mn>0</mn></mrow></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-12-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "相减",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "相减",
+                  "语音": "/files/ait-tts-proxy-svc/2ae5fc36633b5c264920e08540528f00.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "12-相减",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "竖式标识": "72cfa1bc-22b2-4854-aa1c-63d3a8f8b80b",
+                  "说明": "相减",
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"ani-stack-divide-subtract\"><mtable><mtr><mtd></mtd><mtd></mtd><mtd><mn>0</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>7</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd><mrow class=\"ani-stack-divide-divider\"><mn>4</mn></mrow></mtd><mtd class=\"ani-stack-divide-operator\"></mtd><mtd><mn>3</mn><mrow class=\"ani-stack-point\"><mo>.</mo></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd><mn>2</mn></mtd><mtd><mn>8</mn></mtd><mtd></mtd></mtr><mtr class=\"ani-stack-row-underline\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-subtract-minuend\"><mn>2</mn></mrow></mtd><mtd><mrow class=\"ani-stack-divide-subtract-minuend\"><mn>0</mn></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend\"><mn>2</mn></mrow></mtd><mtd><mrow class=\"ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend ani-stack-divide-subtract-subtrahend\"><mn>0</mn></mrow></mtd></mtr><mtr class=\"ani-stack-row-underline ani-stack-row-underline-new\"><mtd></mtd><mtd></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd><mtd class=\"ani-stack-underline\"></mtd></mtr><mtr><mtd></mtd><mtd></mtd><mtd></mtd><mtd></mtd><mtd><mrow class=\"ani-stack-divide-subtract-after\"><mn>0</mn></mrow></mtd></mtr></mtable></math>",
+                  "说明位置": "左",
+                  "类型": "表达式动画"
+                }
+              ]
+            },
+            {
+              "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+              "type": "pand",
+              "name": "STEP-13-P",
+              "children": [
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn> 3 </mn> <mo> &divide; </mo> <mn> 4 </mn><mo>=</mo><mn>0</mn><mo>.</mo><mn>75</mn></math>",
+                  "instruction": "解说",
+                  "children": [],
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn> 3 </mn> <mo> &divide; </mo> <mn> 4 </mn><mo>=</mo><mn>0</mn><mo>.</mo><mn>75</mn></math>",
+                  "语音": "/files/ait-tts-proxy-svc/9be2148df9b78343b7b57f71f2b17981.mp3"
+                },
+                {
+                  "__marshal__": "aog-ide@^3.0.0-core@src/models/eaog-tree-node.js#EaogTreeNode",
+                  "ts": "ait-tutor-board-new",
+                  "type": "instruction",
+                  "name": "13-undefined",
+                  "instruction": "显示内容",
+                  "children": [],
+                  "关联": {},
+                  "重点": [],
+                  "导航": [],
+                  "内容": "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn> 3 </mn> <mo> ÷ </mo> <mn> 4 </mn><mo>=</mo><mn>0</mn><mo>.</mo><mn>75</mn></math>",
+                  "说明位置": "右",
+                  "类型": "表达式动画"
+                }
+              ]
+            }
+          ],
+          "sequence": null,
+          "iterator": null
+        }
+      ],
+      "sequence": null,
+      "iterator": null
+    }
+  ],
+  "sequence": null,
+  "iterator": null
+}

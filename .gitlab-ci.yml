@@ -1,0 +1,326 @@
+stages:
+  - build
+  - unit test
+  - distribute
+  - deploy to dev # 部署docker image至dev环境，仅服务类型的项目有此阶段
+  - integration test
+  - enlist # 服役，正式成为产品的预备成员，仅服务类型的项目有此阶段
+  - retirement # 退役，仅服务类型的项目有此阶段
+
+code review (nodejs/npm):
+  stage: build
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - package.json
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - echo code review
+  tags:
+    - k8s-runner
+
+code review (python/pip):
+  stage: build
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - requirements.txt
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - echo code review
+  tags:
+    - k8s-runner
+
+code review (java/maven):
+  stage: build
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - pom.xml
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - echo code review
+  tags:
+    - k8s-runner
+
+unit test (nodejs/npm):
+  stage: unit test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - package.json
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - npm install --registry=https://nexus.dm-ai.cn/repository/npm/
+    - npm run unit-test
+  tags:
+    - k8s-runner
+
+unit test (python/pip):
+  stage: unit test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - requirements.txt
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - npm install --registry=https://nexus.dm-ai.cn/repository/npm/
+    - npm run unit-test
+  tags:
+    - k8s-runner
+
+unit test (java/maven):
+  stage: unit test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - pom.xml
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - npm install --registry=https://nexus.dm-ai.cn/repository/npm/
+    - npm run unit-test
+  tags:
+    - k8s-runner
+
+publish to nexus (nodejs/npm):
+  stage: distribute
+  rules:
+    - exists:
+        - Dockerfile # 排除服务项目
+      when: never
+    - if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - package.json
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - echo $NPM_REGISTRY_AUTH_TOKEN_NPMRC >> .npmrc
+    - sed -i "s/\"version\":.*,/\"version\":\"${CI_COMMIT_TAG}\",/" package.json
+    - npm publish --registry=http://nexus.dm-ai.cn/repository/npm_hosted/
+  tags:
+    - k8s-runner
+
+publish to nexus (python/pip):
+  stage: distribute
+  rules:
+    - exists:
+        - Dockerfile # 排除服务项目
+      when: never
+    - if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - requirements.txt
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - echo $NPM_REGISTRY_AUTH_TOKEN_NPMRC >> .npmrc
+    - sed -i "s/\"version\":.*,/\"version\":\"${CI_COMMIT_TAG}\",/" package.json
+    - npm publish --registry=http://nexus.dm-ai.cn/repository/npm_hosted/
+  tags:
+    - k8s-runner
+
+publish to nexus (java/maven):
+  stage: distribute
+  rules:
+    - exists:
+        - Dockerfile # 排除服务项目
+      when: never
+    - if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - pom.xml
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - echo $NPM_REGISTRY_AUTH_TOKEN_NPMRC >> .npmrc
+    - sed -i "s/\"version\":.*,/\"version\":\"${CI_COMMIT_TAG}\",/" package.json
+    - npm publish --registry=http://nexus.dm-ai.cn/repository/npm_hosted/
+  tags:
+    - k8s-runner
+
+build & push docker image:
+  stage: distribute
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - Dockerfile
+  image:
+    name: docker.dm-ai.cn/public/kaniko-executor:debug-v1.3.0
+    entrypoint: [""]
+  script:
+    - PRODUCT_NAME=$(cat .runtime-structure.json | sed -n '2p' | awk -F '"' '{print $4}')
+    - if [ $CI_COMMIT_TAG ];
+      then DOCKER_IMAGE_TAG=docker.dm-ai.cn/${PRODUCT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_TAG};
+      else DOCKER_IMAGE_TAG=docker.dm-ai.cn/${PRODUCT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA};
+      fi
+    - echo "{\"auths\":{\"docker.dm-ai.cn\":{\"username\":\"${DOCKER_REGISTRY_USERNAME}\",\"password\":\"${DOCKER_REGISTRY_PASSWORD}\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --context ${CI_PROJECT_DIR} --dockerfile ./Dockerfile --destination ${DOCKER_IMAGE_TAG}
+  tags:
+    - k8s-runner
+
+deploy to dev:
+  stage: deploy to dev
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - Dockerfile
+  image:
+    name: docker.dm-ai.cn/public/sci:0.0.9
+  script:
+    - PRODUCT_NAME=$(cat .runtime-structure.json | jq -r .name)
+    - if [ $CI_COMMIT_TAG ];
+      then CURRENT_VERSION=${CI_COMMIT_TAG};
+      else CURRENT_VERSION=${CI_COMMIT_SHORT_SHA};
+      fi
+    # 部署
+    - npm install -g sci-rsm@^3.0.0 --registry=https://nexus.dm-ai.cn/repository/npm/
+    - rsm set .runtime-structure.json CURRENT_VERSION ${CURRENT_VERSION} -o .runtime-structure.json
+    - rsm generate .runtime-structure.json dev -d deployment.yml -t traffic.yml
+    - echo ${K8S_DEV_TOKEN} | base64 -d > /root/.kube/config
+    - kubectl apply -f deployment.yml
+    - for i in $(kubectl get deployment -n ${PRODUCT_NAME} -ojsonpath='{.items[*].metadata.name}'); do kubectl rollout status deployment $i -n ${PRODUCT_NAME}; done
+    - kubectl apply -f traffic.yml
+    # gc
+    - npm install -g kubectl-gc@^1.0.0 --registry=https://nexus.dm-ai.cn/repository/npm/
+    - kubectl-gc --namespace=${PRODUCT_NAME}
+  environment:
+    name: dev
+    url: https://sci-test-proxy-svc.dev.dm-ai.cn/${CI_PROJECT_NAME}.${PRODUCT_NAME}/
+  tags:
+    - k8s-runner
+
+integration test (nodejs/npm):
+  stage: integration test
+  rules:
+    # .gitlab-ci.yml无法表达，2个文件同时存在的rule。采用先排除其它语言项目的方法
+    - exists:
+        #- package.json # 排除 nodejs/npm 项目
+        - requirements.txt # 排除 python/pip 项目
+        - pom.xml # 排除 java/maven 项目
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - Dockerfile
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - npm install --registry=https://nexus.dm-ai.cn/repository/npm/
+    - npm run integration-test
+  tags:
+    - k8s-runner
+
+integration test (python/pip):
+  stage: integration test
+  rules:
+    # .gitlab-ci.yml无法表达，2个文件同时存在的rule。采用先排除其它语言项目的方法
+    - exists:
+        - package.json # 排除 nodejs/npm 项目
+        #- requirements.txt # 排除 python/pip 项目
+        - pom.xml # 排除 java/maven 项目
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - Dockerfile
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - npm install --registry=https://nexus.dm-ai.cn/repository/npm/
+    - npm run integration-test
+  tags:
+    - k8s-runner
+
+integration test (java/maven):
+  stage: integration test
+  rules:
+    # .gitlab-ci.yml无法表达，2个文件同时存在的rule。采用先排除其它语言项目的方法
+    - exists:
+        - package.json # 排除 nodejs/npm 项目
+        - requirements.txt # 排除 python/pip 项目
+        #- pom.xml # 排除 java/maven 项目
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - Dockerfile
+      allow_failure: true
+  image:
+    name: docker.dm-ai.cn/public/node:12-alpine3.12
+  script:
+    - npm install --registry=https://nexus.dm-ai.cn/repository/npm/
+    - npm run integration-test
+  tags:
+    - k8s-runner
+
+# 入列
+enlist:
+  stage: enlist
+  rules:
+    # 正式发版的服务才能入列
+    - if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - Dockerfile
+  image: docker.dm-ai.cn/public/sci:0.0.9
+  script:
+    # 入列到哪个产品
+    - PRODUCT_NAME=$(cat .runtime-structure.json | jq -r .name)
+    - PRODUCT_REPO=$(cat .runtime-structure.json | jq -r .properties.repository)
+
+    # 使用tag填充.runtime-structure.json的版本号
+    - npm install -g sci-rsm@^3.0.0 --registry=https://nexus.dm-ai.cn/repository/npm/
+    - rsm set .runtime-structure.json CURRENT_VERSION ${CI_COMMIT_TAG} -o .runtime-structure.json
+    - cat .runtime-structure.json
+    - echo "上述服务版本即将入列至产品${PRODUCT_NAME}(${PRODUCT_REPO})"
+
+    - git clone ${PRODUCT_REPO}
+    - cd $(echo ${PRODUCT_REPO} | sed 's/.*\/\(.*\).git/\1/g')
+
+    # 若存在patch分支，说明正有一个热发布流程在进行，退出。
+    - PATCH=$(git branch --remote | sed -n "/origin\/patch/p")
+    - if [ $PATCH ]; then echo "当前正有一个热发布流程在进行，请稍候再试"; exit 1; fi
+
+    # 判断版本升级的级别: major: 4, minor: 2, patch: 1, no: 0
+    - git switch master
+    - CHANGE_LEVEL=$(rsm get-change-level ../.runtime-structure.json .runtime-structure.json)
+    - echo $CHANGE_LEVEL
+
+    # enlist
+    - if [ $CHANGE_LEVEL -gt 1 ]; then git switch dev;
+      else GIT_PUSH_PARAMETER="--set-upstream origin patch"; git checkout -b patch;
+      fi
+    - git status
+    # 合并。策略：major增加版本，minor替换版本，patch替换版本
+    - rsm merge .runtime-structure.json ../.runtime-structure.json -o .runtime-structure.json
+    - 'git commit -am "sci: component ${CI_PROJECT_NAME}(id:${CI_PROJECT_ID}):${CURRENT_VERSION} published with ${CHANGE_LEVEL} level of update enlist."'
+    - git push $GIT_PUSH_PARAMETER
+  environment:
+    name: enlist/${CI_COMMIT_REF_NAME}
+    on_stop: retire
+  tags:
+    - k8s-runner
+
+# 退役
+retire:
+  stage: retirement
+  rules:
+    # 正式发版的服务才能退役
+    - if: '$CI_COMMIT_TAG =~ /^\d+\.\d+\.\d+/'
+      exists:
+        - Dockerfile
+      when: manual
+  image: docker.dm-ai.cn/public/sci:0.0.9
+  script:
+    - echo "${CI_PROJECT_NAME}(id:${CI_PROJECT_ID}):${CURRENT_VERSION}退役"
+  environment:
+    name: enlist/${CI_COMMIT_REF_NAME}
+    action: stop

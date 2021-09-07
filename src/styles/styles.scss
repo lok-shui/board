@@ -1,0 +1,320 @@
+@import './helper.css';
+@import './animate.scss';
+@import './math-font.scss';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 15px !important;
+    user-select: none;
+
+    @media only screen and (max-width : 320px) {
+        font-size: calc(1500vmin / 480) !important;
+    }
+}
+
+body {
+    line-height: 2;
+}
+
+// -------------表达式动画-------------
+.mjx-container {
+    font-size: inherit !important;
+}
+
+mjx-container [size='s'] {
+    font-size: 100% !important;
+}
+
+mjx-container {
+    margin-left: 2px;
+    margin-right: 2px;
+
+    transform: translate3d(0, 0, 0);
+    z-index: 1;
+
+    mjx-line {
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    mjx-frac {
+        vertical-align: -0.07em;
+    }
+
+    mjx-msub mjx-script [size='s'] {
+        font-size: 70.7% !important;
+    }
+
+    mjx-msup mjx-script [size='s'] {
+        font-size: 0.7rem !important;
+    }
+
+    mjx-assistive-mml {
+        display: none !important;
+    }
+
+    mjx-stretchy-h, mjx-stretchy-v {
+        z-index: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.content-text {
+    mjx-math {
+        display: inline;
+        white-space: normal !important;
+
+        & > * {
+            margin-bottom: 4px;
+        }
+    }
+
+    mjx-under {
+        line-height: 0.5;
+    }
+
+    mjx-mrow {
+        //display: inline;
+    }
+}
+
+.ani-content {
+    line-height: 0;
+}
+
+.ani-content:not(.ani-content-left) .ani-explain {
+    opacity: 0.65 !important;
+}
+
+// -------------表达式动画-------------
+
+@keyframes wave {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2);
+    }
+}
+
+.ani-content:not(.ani-content-left) .ani-explain {
+    opacity: 0.65;
+}
+
+
+.playBtn__beat {
+    animation: beat 3s infinite ease-in-out 3s;
+}
+
+@keyframes beat {
+    6% {
+        transform: scale(1.2);
+    }
+
+    13% {
+        transform: scale(0.8);
+    }
+
+    23% {
+        transform: scale(1.3);
+    }
+
+    33% {
+        transform: scale(1);
+    }
+}
+
+.btn-scale-transition {
+    transition: transform 200ms ease-in-out !important;
+}
+
+.scale-btn {
+    position: relative;
+
+    & > * {
+        transition: transform 200ms ease-in-out !important;
+    }
+
+    &:active {
+        & > * {
+            transform: scale(0.8);
+        }
+    }
+}
+
+.active-btn {
+    &:active {
+        &:before {
+            background-color: inherit;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        transition: background-color 200ms;
+        transform: scale(1) !important;
+    }
+}
+
+#questionContent::-webkit-scrollbar {
+    display: none;
+}
+
+#tutorBoardContent::-webkit-scrollbar {
+    display: none;
+}
+
+.highlight-color {
+    transition: color 500ms;
+    color: #51A0FF;
+    font-weight: bold;
+    &.active * {
+        color: #51A0FF!important;
+    }
+    &.no-transition {
+        transition: none;
+    }
+}
+.dim .highlight-color:not(.active) {
+    color: rgba(81, 160, 255, 0.4);;
+}
+
+// .ios-root {
+//   font-size: 1.2rem!important;
+
+//   .ios-title {
+//     font-size: 2rem!important;
+//   }
+
+//   .ios-collapse-title {
+//     font-size: 1.2rem!important;
+//   }
+
+//   .ios-count {
+//     font-size: 1rem!important;
+//   }
+// }
+
+// .iphone-root {
+//   font-size: 16px!important;
+
+//   .ios-title {
+//     font-size: 26px!important;
+//   }
+
+//   .ios-collapse-title {
+//     font-size: 16px!important;
+//   }
+// }
+
+.overwrite-root {
+  font-size: 4vw!important;
+
+  .ios-collapse-title {
+    font-size: 4vw!important;
+  }
+
+  // .ios-count {
+  //   font-size: 3.2vw!important;
+  // }
+}
+
+@media screen and (min-width: 480px) {
+  .overwrite-root {
+    font-size: 3vw!important;
+
+    .ios-collapse-title {
+      font-size: 3vw!important;
+    }
+
+    .ios-count {
+      font-size: 2.5vw!important;
+    }
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .overwrite-root {
+    font-size: 2.5vw!important;
+
+    .ios-collapse-title {
+      font-size: 2.5vw!important;
+    }
+
+    .ios-count {
+      font-size: 2.1vw!important;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .overwrite-root {
+    font-size: 2vw!important;
+
+    .ios-collapse-title {
+      font-size: 2vw!important;
+    }
+
+    .ios-count {
+      font-size: 1.65vw!important;
+    }
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .overwrite-root {
+    font-size: 1.5vw!important;
+
+    .ios-collapse-title {
+      font-size: 1.5vw!important;
+    }
+
+    .ios-count {
+      font-size: 1.25vw!important;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overwrite-root {
+    font-size: 20px!important;
+
+    .ios-collapse-title {
+      font-size: 20px!important;
+    }
+
+    .ios-count {
+      font-size: 14px!important;
+    }
+
+    &.tencent-mode {
+      font-size: 24px!important;
+
+      .ios-collapse-title {
+        font-size: 24px!important;
+      }
+    }
+  }
+}
+
+.mml-nobreak {
+  display: inline-block;
+  white-space: nowrap;
+}

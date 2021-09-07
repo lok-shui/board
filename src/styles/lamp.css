@@ -1,0 +1,8 @@
+@font-face {
+  font-family: '方正兰亭中粗圆';
+  src: url(./fonts/方正兰亭中粗圆.ttf);
+}
+
+.lamp {
+  font-family: '方正兰亭中粗圆';
+}

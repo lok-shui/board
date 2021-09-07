@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {"@/*": ["src/*"]},
+        "downlevelIteration": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "isolatedModules": false
+    }
+}

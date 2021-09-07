@@ -1,0 +1,47 @@
+{
+    "name": "ait",
+    "properties": {
+        "repository": "git@gitlab.dm-ai.cn:AIT/deployment.git"
+    },
+    "services": [
+        {
+            "name": "ait-tutor-board",
+            "description": "讲题板",
+            "properties": {
+                "group": "ait",
+                "author": {
+                    "name": "yangguang",
+                    "email": "yangguang@dm-ai.cn"
+                },
+                "repository": "git@gitlab.dm-ai.cn:AIT/apps/ait-tutor-board.git"
+            },
+            "port": "80",
+            "domain-names": [
+                {
+                    "dev": "ait-tutor-board.dev.dm-ai.cn",
+                    "stage": "ait-tutor-board.stage.dm-ai.cn",
+                    "prd": "ait-tutor-board.dm-ai.cn"
+                },
+                {
+                    "dev": "ait-tutor-board-ait.dev.dm-ai.cn",
+                    "stage": "ait-tutor-board-ait.stage.dm-ai.cn",
+                    "prd": "ait-tutor-board-ait.dm-ai.cn"
+                }
+            ],
+            "versions": {
+                "${CURRENT_VERSION}": {
+                    "replicas": {
+                        "dev": 1,
+                        "stage": 1,
+                        "prd": 3
+                    },
+                    "weight": 100
+                }
+            },
+            "requirements": {
+                "cpu": 1,
+                "memory": 1
+            }
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "name": "ait-tutor-board",
+    "version": "1.5.42",
+    "private": true,
+    "scripts": {
+        "start": "react-app-rewired start",
+        "build": "react-app-rewired build",
+        "analyze": "source-map-explorer 'dist/static/js/*.js'",
+        "build-docker-image": "docker build -t docker.dm-ai.cn/ait/%npm_package_name%:%npm_package_version% .",
+        "docker-login": "docker login https://docker.dm-ai.cn/",
+        "push-docker-image": "docker push docker.dm-ai.cn/ait/%npm_package_name%:%npm_package_version%"
+    },
+    "dependencies": {
+        "@material-ui/core": "^4.11.0",
+        "@material-ui/icons": "^4.9.1",
+        "ait-mathml-utils": "^1.0.5",
+        "animate.css": "^4.1.0",
+        "axios": "^0.19.2",
+        "chalk": "^4.1.0",
+        "classnames": "^2.2.6",
+        "core-js": "^3.6.5",
+        "d3": "^5.16.0",
+        "debug": "^4.2.0",
+        "diff-match-patch": "^1.0.5",
+        "engine.io-client": "^4.0.0",
+        "eventemitter3": "^4.0.4",
+        "events": "^3.1.0",
+        "konva": "^7.0.3",
+        "mathjax": "^3.0.5",
+        "mathml-animation": "^1.0.2",
+        "normalize.css": "^8.0.1",
+        "notistack": "^0.9.17",
+        "query-string": "^6.13.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-redux": "^7.2.0",
+        "react-router-dom": "^5.2.0",
+        "react-router-redux": "^4.0.8",
+        "react-scripts": "3.4.1",
+        "react-transition-group": "^4.4.1",
+        "react-use": "^15.3.3",
+        "redux": "^4.0.5",
+        "redux-actions": "^2.6.5",
+        "redux-promise": "^0.6.0",
+        "redux-thunk": "^2.3.0",
+        "rxjs": "^6.6.0",
+        "socket.io-client": "^2.3.0",
+        "svgaplayerweb": "^2.3.1"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-decorators": "^7.10.4",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "@types/classnames": "^2.2.10",
+        "@types/d3": "^5.7.2",
+        "@types/diff-match-patch": "^1.0.32",
+        "@types/jest": "^24.0.0",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.9.0",
+        "@types/react-dom": "^16.9.0",
+        "@types/react-redux": "^7.1.9",
+        "@types/react-router-dom": "^5.1.5",
+        "@types/redux-actions": "^2.6.1",
+        "@types/redux-promise": "^0.5.29",
+        "@types/socket.io-client": "^1.4.33",
+        "cra-template-typescript": "1.0.3",
+        "customize-cra": "^1.0.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "lint-staged": "^10.2.11",
+        "node-sass": "^4.14.1",
+        "postcss-pxtorem": "^5.1.1",
+        "prettier": "^2.0.5",
+        "react-app-rewired": "^2.1.6",
+        "sass-resources-loader": "^2.0.3",
+        "source-map-explorer": "^2.4.2",
+        "typescript": "~3.7.2",
+        "yorkie": "^2.0.0"
+    },
+    "browserslist": {
+        "production": [
+            ">0.1%",
+            "not dead",
+            "not op_mini all",
+            "iOS 7",
+            "android 4",
+            "chrome 43"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "eslint ./src --fix"
+        ]
+    }
+}

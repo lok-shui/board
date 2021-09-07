@@ -1,0 +1,400 @@
+// @font-face {
+//   font-family: '方正兰亭中粗圆';
+//   src: url(./fonts/方正兰亭中粗圆.ttf);
+// }
+
+// .lamp {
+//   font-family: '方正兰亭中粗圆';
+// }
+
+@font-face {
+  font-family: AIT-LAMP-BOLD;
+  src: url(./fonts/ait-lamp-bold.ttf);
+}
+
+.lamp .MJX-TEX {
+  font-family: AIT-LAMP-BOLD;
+}
+
+.lamp mjx-c.mjx-c25::before {
+  padding: 0.746em 1.000em 0.045em 0;
+}
+
+.lamp mjx-c.mjx-c28::before {
+  padding: 0.746em 0.296em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-c29::before {
+  padding: 0.746em 0.296em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-c2B::before {
+  padding: 0.715em 0.699em 0 0;
+}
+
+.lamp mjx-c.mjx-c2212::before,
+.lamp mjx-c.mjx-c2D::before {
+  padding: 0.715em 0.699em 0 0;
+  content: "-";
+}
+
+.lamp mjx-c.mjx-c2E::before {
+  padding: 0.105em 0.296em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c30::before {
+  padding: 0.746em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c31::before {
+  padding: 0.744em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c32::before {
+  padding: 0.746em 0.597em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c33::before {
+  padding: 0.746em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c34::before {
+  padding: 0.746em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c35::before {
+  padding: 0.727em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c36::before {
+  padding: 0.746em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c37::before {
+  padding: 0.727em 0.597em 0.046em 0;
+}
+
+.lamp mjx-c.mjx-c38::before {
+  padding: 0.746em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c39::before {
+  padding: 0.746em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c3A::before {
+  padding: 0.414em 0.296em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c3C::before {
+  padding: 0.716em 0.656em 0 0;
+}
+
+.lamp mjx-c.mjx-c3D::before {
+  padding: 0.711em 0.656em 0 0;
+}
+
+.lamp mjx-c.mjx-c3E::before {
+  padding: 0.716em 0.656em 0 0;
+}
+
+.lamp mjx-c.mjx-c41::before {
+  padding: 0.746em 0.746em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c42::before {
+  padding: 0.727em 0.660em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c43::before {
+  padding: 0.746em 0.714em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c44::before {
+  padding: 0.727em 0.734em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c45::before {
+  padding: 0.728em 0.609em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c46::before {
+  padding: 0.727em 0.566em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c47::before {
+  padding: 0.746em 0.734em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c48::before {
+  padding: 0.746em 0.718em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c49::before {
+  padding: 0.746em 0.347em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c4A::before {
+  padding: 0.746em 0.531em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c4B::before {
+  padding: 0.746em 0.656em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c4C::before {
+  padding: 0.746em 0.578em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c4D::before {
+  padding: 0.746em 0.914em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c4E::before {
+  padding: 0.746em 0.718em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c4F::before {
+  padding: 0.746em 0.796em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c50::before {
+  padding: 0.727em 0.628em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c51::before {
+  padding: 0.746em 0.847em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c52::before {
+  padding: 0.727em 0.660em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c53::before {
+  padding: 0.746em 0.632em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c54::before {
+  padding: 0.727em 0.667em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c55::before {
+  padding: 0.746em 0.718em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c56::before {
+  padding: 0.746em 0.699em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c57::before {
+  padding: 0.746em 1.000em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c58::before {
+  padding: 0.746em 0.699em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c59::before {
+  padding: 0.748em 0.699em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c5A::before {
+  padding: 0.727em 0.597em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c5B::before {
+  padding: 0.746em 0.277em 0.255em 0;
+}
+
+.lamp mjx-c.mjx-c5D::before {
+  padding: 0.746em 0.277em 0.255em 0;
+}
+
+.lamp mjx-c.mjx-c61::before {
+  padding: 0.484em 0.527em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c62::before {
+  padding: 0.746em 0.578em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c63::before {
+  padding: 0.484em 0.542em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c64::before {
+  padding: 0.746em 0.578em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c65::before {
+  padding: 0.484em 0.578em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c66::before {
+  padding: 0.727em 0.386em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c67::before {
+  padding: 0.484em 0.574em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-c68::before {
+  padding: 0.746em 0.550em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c69::before {
+  padding: 0.746em 0.296em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c6A::before {
+  padding: 0.746em 0.253em 0.255em 0;
+}
+
+.lamp mjx-c.mjx-c6B::before {
+  padding: 0.746em 0.523em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c6C::before {
+  padding: 0.746em 0.250em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c6D::before {
+  padding: 0.484em 0.820em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c6E::before {
+  padding: 0.484em 0.550em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c6F::before {
+  padding: 0.484em 0.597em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c70::before {
+  padding: 0.484em 0.578em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-c71::before {
+  padding: 0.484em 0.585em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-c72::before {
+  padding: 0.484em 0.367em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c73::before {
+  padding: 0.484em 0.511em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c74::before {
+  padding: 0.602em 0.390em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c75::before {
+  padding: 0.484em 0.550em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c76::before {
+  padding: 0.484em 0.562em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c77::before {
+  padding: 0.484em 0.828em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c78::before {
+  padding: 0.484em 0.535em 0.043em 0;
+}
+
+.lamp mjx-c.mjx-c79::before {
+  padding: 0.484em 0.585em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-c7A::before {
+  padding: 0.465em 0.484em 0.023em 0;
+}
+
+.lamp mjx-c.mjx-c7B::before {
+  padding: 0.746em 0.347em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-c7D::before {
+  padding: 0.746em 0.347em 0.254em 0;
+}
+
+.lamp mjx-c.mjx-cB7::before {
+  padding: 0.699em 0.296em 0 0;
+}
+
+.lamp mjx-c.mjx-cD7::before {
+  padding: 0.700em 0.699em 0 0;
+}
+
+.lamp mjx-c.mjx-cF7::before {
+  padding: 0.699em 0.699em 0 0;
+}
+
+.lamp mjx-c.mjx-c2026::before {
+  padding: 0.700em 1.000em 0 0;
+}
+
+.lamp mjx-c.mjx-c2248::before {
+  padding: 0.665em 0.656em 0 0;
+}
+
+.lamp mjx-c.mjx-c2260::before {
+  padding: 0.667em 0.656em 0 0;
+}
+
+.lamp mjx-c.mjx-c2264::before {
+  padding: 0.678em 0.656em 0 0;
+}
+
+.lamp mjx-c.mjx-c2265::before {
+  padding: 0.678em 0.656em 0 0;
+}
+
+/* : */
+.lamp mjx-c.mjx-c3A {
+  vertical-align: 0.15em;
+}
+
+/* 括号垂直位置调整 */
+.lamp mjx-c.mjx-c28,
+.lamp mjx-c.mjx-c29,
+.lamp mjx-c.mjx-c5B,
+.lamp mjx-c.mjx-c5D,
+.lamp mjx-c.mjx-c7B,
+.lamp mjx-c.mjx-c7D {
+  vertical-align: 0.1em;
+}
+
+/* 分数线 */
+.lamp mjx-line {
+  border-top-width: 0.15em;
+}
+
+/* 定制样式 */
+.lamp {
+  .ani-content {
+    mjx-mrow {
+      line-height: 0;
+    }
+
+    .ani-expression {
+      mjx-math {
+        mjx-mrow {
+          line-height: inherit;
+        }
+      }
+    }
+  }
+
+  .ani-explain {
+    display: none!important;
+  }
+
+  mjx-mrow {
+    line-height: .6;
+  }
+}
